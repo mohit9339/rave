@@ -3,7 +3,7 @@ workflows:
     name: RAVE Android APK
 
     environment:
-      node: 20
+      node: 22
 
     scripts:
       - npm install
