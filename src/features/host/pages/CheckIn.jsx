@@ -61,6 +61,9 @@ export default function CheckIn() {
     load();
   }, [id, navigate]);
 
+
+  
+
   // Cleanup camera on unmount
   useEffect(() => {
     return () => stopCamera();

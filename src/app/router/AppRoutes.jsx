@@ -17,6 +17,8 @@ import HostEventDetails from "../../features/host/pages/HostEventDetails";
 import EditEvent from "../../features/host/pages/EditEvent";
 import CheckIn from "../../features/host/pages/CheckIn";
 import EventAttendees from "../../features/host/pages/EventAttendees";
+import AdminDashboard from
+"../../features/admin/pages/AdminDashboard";
 
 export default function AppRoutes() {
   return (
@@ -99,6 +101,11 @@ export default function AppRoutes() {
       <Route
         path="/host-attendees/:id"
         element={<EventAttendees />}
+      />
+
+      <Route
+        path="/admin"
+        element={<AdminDashboard />}
       />
 
     </Routes>

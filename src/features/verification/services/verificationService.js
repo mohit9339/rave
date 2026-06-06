@@ -71,3 +71,53 @@ export async function updateVerificationStatus(
     error,
   };
 }
+
+export async function getPendingVerifications() {
+  return await supabase
+    .from("host_verifications")
+    .select("*")
+    .eq("status", "pending");
+}
+
+export async function approveVerification(
+  verificationId,
+  userId
+) {
+  await supabase
+    .from(
+      "host_verifications"
+    )
+    .update({
+      status:
+        "approved",
+    })
+    .eq(
+      "id",
+      verificationId
+    );
+
+  return await supabase
+    .from("users")
+    .update({
+      role: "host",
+    })
+    .eq("id", userId);
+}
+
+
+export async function rejectVerification(
+  verificationId
+) {
+  return await supabase
+    .from(
+      "host_verifications"
+    )
+    .update({
+      status:
+        "rejected",
+    })
+    .eq(
+      "id",
+      verificationId
+    );
+}
