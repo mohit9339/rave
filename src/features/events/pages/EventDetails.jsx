@@ -606,7 +606,7 @@ export default function EventDetails() {
           >
             <h3 style={{ marginBottom: "8px" }}>Scan to Pay</h3>
             <p style={{ color: "#9CA3AF", marginBottom: "20px", fontSize: "14px" }}>
-              UPI ID: ravepayments@ybl
+              UPI ID: mohitg9339@oksbi
             </p>
 
             <img
